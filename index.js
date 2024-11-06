@@ -1,30 +1,15 @@
-let course = prompt("Курс нөмірін енгізіңіз (1, 2, 3 немесе 4):");
-let isAlmaty = prompt("Сіз Алматыдан келдіңіз бе? (yes немесе no)");
+let age = prompt("Жасыңызды енгізіңіз: ");
+let isStudent = prompt("Сіз студентсіз бе? Иә/Жоқ") === "Иә";
 
-if (course == "1" || course == "2") {
-    if (isAlmaty == "no") {
-        alert("Сізге жатақханадан орын беріледі.");
-    } else {
-        alert("Сізге жатақхана берілмейді.");
-    }
-} else {
-    alert("Сізге жатақхана берілмейді.");
-}
+let discountEligible = (age > 65 || isStudent);
+console.log(discountEligible);
 
+let number = prompt("Сан енгізіңіз:");
+let isInRange = (number >= 10 && number <= 20);
+console.log(isInRange);
 
-alert("Ойын шарты: әрбір дұрыс жауап үшін 1 ұпай беріледі.");
+let num1 = prompt("Бірінші санды енгізіңіз:");
+let num2 = prompt("Екінші санды енгізіңіз:");
 
-let surak1 = prompt("Қазақстанның тәуелсіздік алған жылы:");
-let surak2 = prompt("Қазір оқып жатқан қалаңыз:");
-
-let score = 0;
-
-if (surak1 == "1991") {
-    score += 1;
-}
-
-if (surak2 == "Almaty") {
-    score += 1;
-}
-
-alert("Сіздің жинаған ұпайыңыз: " + score);
+let oneIsNegative = (num1 < 0 && num2 >= 0) || (num1 >= 0 && num2 < 0);
+console.log(oneIsNegative);
